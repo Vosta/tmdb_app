@@ -1,0 +1,12 @@
+.navBar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 40px;
+    padding: 0 50px;
+    h3 {
+        &:first-child {
+            margin-right: 2em;
+        }
+    }
+}
