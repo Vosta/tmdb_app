@@ -1,11 +1,11 @@
 {
-    "parser": "babel-eslint",
     "env": {
         "browser": true,
         "es6": true
     },
     "extends": [
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "airbnb"
     ],
     "globals": {
         "Atomics": "readonly",
@@ -15,7 +15,7 @@
         "ecmaFeatures": {
             "jsx": true
         },
-        "ecmaVersion": 6,
+        "ecmaVersion": 2018,
         "sourceType": "module"
     },
     "plugins": [
@@ -27,6 +27,24 @@
         "react/display-name": 1,
         "no-unused-vars": "warn",
         "no-console": 1,
-        "no-unexpected-multiline": "warn"
+        "no-unexpected-multiline": "warn",
+        "eol-last": "warn",
+        // Indent with 4 spaces
+        "indent": [
+            "error",
+            4
+        ],
+        // Indent JSX with 4 spaces
+        "react/jsx-indent": [
+            "error",
+            4
+        ],
+        // Indent props with 4 spaces
+        "react/jsx-indent-props": [
+            "error",
+            4
+        ],
+        "max-len": ["warn", 120],
+        "camelcase": "off"
     }
 }

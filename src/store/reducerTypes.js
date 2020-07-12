@@ -1,0 +1,2 @@
+export const REPLACE_CONFIG = 'REPLACE_CONFIG';
+export const REPLACE_GENRES = 'REPLACE_GENRES';
