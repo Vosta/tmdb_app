@@ -1,12 +1,43 @@
+$orangeColor: #ff9800;
 .navBar {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    height: 40px;
-    padding: 0 50px;
+    height: 50px;
+    padding: 0 4%;
     h3 {
-        &:first-child {
-            margin-right: 2em;
+        margin-right: 2em;
+        cursor: pointer;
+        &:hover {
+            color: $orangeColor;
+        }
+    }
+    .searchWrapper {
+        display: flex;
+        align-items: center;
+        h3 {
+            margin: 0;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+        .searchInputField {
+            border: 0;
+            outline: none;
+            width: 0;
+            transition: width 0.3s;
+            background: transparent;
+            margin-right: 5px;
+            color: white;
+            &.active {
+                width: 150px;
+                border-bottom: 1px solid $orangeColor;
+            }
+        }
+        svg {
+            &:hover {
+                color: $orangeColor;
+            }
         }
     }
 }

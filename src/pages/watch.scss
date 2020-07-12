@@ -1,0 +1,22 @@
+.assetPlayerWrapper {
+    .assetPlayer {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background: black;
+    }
+    .closeIcon {
+        padding: 20px;
+        font-size: 25px;
+        margin: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+        color: white;
+        z-index: 1;
+        cursor: pointer;
+    }
+}

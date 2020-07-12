@@ -49,12 +49,26 @@ export default class Api {
         return this.actionGet(endpoint);
     }
 
-    getMovie(params, data) {
-        const { movie_id } = data;
-        if (movie_id) {
-            const endpoint = `${apiEndpoints.movie}/${movie_id}`;
+    getSingleMovie(params, data) {
+        const { assetID } = data;
+        if (assetID) {
+            const endpoint = `${apiEndpoints.movie}/${assetID}`;
             return this.actionGet(endpoint, params);
         }
         return null;
+    }
+
+    getSingleSeries(params, data) {
+        const { assetID } = data;
+        if (assetID) {
+            const endpoint = `${apiEndpoints.series}/${assetID}`;
+            return this.actionGet(endpoint, params);
+        }
+        return null;
+    }
+
+    search(params) {
+        const endpoint = apiEndpoints.search;
+        return this.actionGet(endpoint, params);
     }
 }

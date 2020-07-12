@@ -1,14 +1,22 @@
 import { useReducer, useEffect } from 'react';
-import { REPLACE_CONFIG, REPLACE_GENRES } from './reducerTypes';
+import {
+    REPLACE_CONFIG, REPLACE_GENRES, SET_SEARCH_VALUE
+} from './reducerTypes';
 import ApiService from '../services/api';
 
 const initialState = {
     config: null,
-    genres: null
+    genres: null,
+    searchValue: ''
 };
 
 const reducer = (state, action) => {
     switch (action.type) {
+    case SET_SEARCH_VALUE:
+        return {
+            ...state,
+            searchValue: action.payload
+        };
     case REPLACE_CONFIG:
         return {
             ...state,
