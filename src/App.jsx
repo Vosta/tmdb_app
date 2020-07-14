@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
 import NavBar from './components/navBar';
 import HomePage from './pages/home';
 import GlobalStateProvider from './store/globalStateProvider';
@@ -12,6 +12,7 @@ function App() {
             <GlobalStateProvider>
                 <div className="App">
                     <NavBar />
+                    <Route exact path="/" render={() => <Redirect to="/browse" />} />
                     <Route path="/browse" component={HomePage} />
                     <Route path="/watch" component={WatchPage} />
                 </div>

@@ -29,12 +29,12 @@ export default class Api {
         return axios.get(url, options);
     }
 
-    getMovies(params) {
+    discoverMovies(params) {
         const endpoint = apiEndpoints.discoverMovies;
         return this.actionGet(endpoint, params);
     }
 
-    getSeries(params) {
+    discoverSeries(params) {
         const endpoint = apiEndpoints.discoverSeries;
         return this.actionGet(endpoint, params);
     }
@@ -49,22 +49,14 @@ export default class Api {
         return this.actionGet(endpoint);
     }
 
-    getSingleMovie(params, data) {
-        const { assetID } = data;
-        if (assetID) {
-            const endpoint = `${apiEndpoints.movie}/${assetID}`;
-            return this.actionGet(endpoint, params);
-        }
-        return null;
+    getMovies(params, addToEndpoint) {
+        const endpoint = `${apiEndpoints.movie}/${addToEndpoint.join('/')}`;
+        return this.actionGet(endpoint, params);
     }
 
-    getSingleSeries(params, data) {
-        const { assetID } = data;
-        if (assetID) {
-            const endpoint = `${apiEndpoints.series}/${assetID}`;
-            return this.actionGet(endpoint, params);
-        }
-        return null;
+    getSeries(params, addToEndpoint) {
+        const endpoint = `${apiEndpoints.series}/${addToEndpoint.join('/')}`;
+        return this.actionGet(endpoint, params);
     }
 
     search(params) {

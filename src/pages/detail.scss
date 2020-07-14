@@ -1,99 +1,10 @@
 .detailWrapper {
     height: 100%;
+    max-width: 100%;
     width: 100%;
     position: fixed;
     left: 0;
     top: 0;
     background: rgba(0, 0, 0, 0.7);
     z-index: 2;
-    .detailContent {
-        width: 900px;
-        height: 100%;
-        background: black;
-        position: absolute;
-        left: 50%;
-        top: 0;
-        transform: translate(-50%);
-        .closeIcon {
-            padding: 20px 27px;
-            font-size: 25px;
-            margin: 0;
-            position: absolute;
-            right: 0;
-            z-index: 1;
-            color: white;
-            z-index: 1;
-            cursor: pointer;
-        }
-        .detailContentVideoWrapper {
-            width: 100%;
-            height: 505px;
-            position: relative;
-            .iframeWrapper {
-                position: relative;
-                padding-bottom: 56.25%;
-                /* 16:9 */
-                height: 0;
-                iframe {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    filter: brightness(0.8);
-                    pointer-events: none;
-                }
-            }
-            img {
-                position: absolute;
-                left: 50%;
-                top: 0;
-                transform: translateX(-50%);
-                max-height: 100%;
-            }
-        }
-        .detailContentInfo {
-            width: 100%;
-            height: 100%;
-            p {
-                color: white;
-                padding: 0 30px;
-                margin-top: 0;
-                margin-bottom: 20px;
-            }
-            .title {
-                font-size: 45px;
-                font-weight: bold;
-                display: flex;
-                align-items: center;
-                max-width: 75%;
-                span {
-                    margin-top: 2px;
-                    max-width: 75%;
-                }
-                button {
-                    width: 106px;
-                    height: 40px;
-                    background: white;
-                    border: none;
-                    outline: none;
-                    font-size: 18px;
-                    border-radius: 5px;
-                    display: inline-flex;
-                    align-items: center;
-                    justify-content: space-around;
-                    margin-top: 9px;
-                    margin-left: 43px;
-                    cursor: pointer;
-                    &:hover {
-                        background: #e8e8e8;
-                    }
-                }
-            }
-            .description {
-                width: 90%;
-                font-size: 17px;
-            }
-        }
-    }
 }

@@ -9,8 +9,8 @@ body {
 }
 
 body {
-    background: #080808;
-    color: #f1f1f1;
+    background: #1A1A1A;
+    color: #DCDBDE;
     h3,
     h2 {
         margin: 0;
@@ -20,5 +20,16 @@ body {
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
+    }
+    .hiddenScrollBar {
+        // hidden scroll bar style
+        /* Internet Explorer 10+ */
+        -ms-overflow-style: none;
+        /* Firefox */
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            /* Safari and Chrome */
+            display: none;
+        }
     }
 }

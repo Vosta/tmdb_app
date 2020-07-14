@@ -1,6 +1,7 @@
 import React, { useContext, useState, useRef } from 'react';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
 import GlobalState from '../../store/context';
 import { SET_SEARCH_VALUE } from '../../store/reducerTypes';
 
@@ -29,7 +30,8 @@ export default function NavBar() {
     const inputClassName = `searchInputField ${searchStatus ? 'active' : ''}`;
     return (
         <nav className="navBar">
-            <h3>Home</h3>
+            <h2 className="brandLogo">VS Streaming</h2>
+            <Link to="/browse">Home</Link>
             <div className="searchWrapper">
                 <input
                     ref={searchInputRef}

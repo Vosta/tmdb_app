@@ -5,7 +5,16 @@ $orangeColor: #ff9800;
     justify-content: flex-start;
     height: 50px;
     padding: 0 4%;
-    h3 {
+    color: white;
+    .brandLogo {
+        margin-right: 40px;
+        color: white;
+    }
+    a {
+        margin-top: 4px;
+        text-decoration: none;
+        color: inherit;
+        font-size: 16px;
         margin-right: 2em;
         cursor: pointer;
         &:hover {
@@ -15,6 +24,7 @@ $orangeColor: #ff9800;
     .searchWrapper {
         display: flex;
         align-items: center;
+        margin-top: 4px;
         h3 {
             margin: 0;
         }

@@ -1,0 +1,156 @@
+.detailContent {
+    width: 940px;
+    max-width: 100%;
+    height: 100%;
+    background: black;
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%);
+    overflow: hidden auto;
+    .closeIcon {
+        padding: 20px 27px;
+        font-size: 25px;
+        margin: 0;
+        position: absolute;
+        right: 0;
+        z-index: 1;
+        color: white;
+        z-index: 1;
+        cursor: pointer;
+    }
+    .detailContentHeader {
+        height: 528px;
+        width: 100%;
+        background-position: center;
+        background-size: contain;
+        box-shadow: inset 0px 35px 35px -5px #000, inset 0px -35px 35px -5px #000;
+        margin-bottom: 10px;
+        position: relative;
+        .detailContentHeaderPlayButton {
+            border: solid 3px #fff;
+            background-color: rgba(0, 0, 0, .5);
+            width: 56px;
+            height: 56px;
+            background-size: 100%;
+            border-radius: 100px;
+            cursor: pointer;
+            font-size: 25px;
+            &:hover {
+                background-color: rgba(234, 151, 0, 0.82);
+            }
+            svg {
+                margin: 1px 2px;
+            }
+        }
+    }
+    .detailContentVideoWrapper {
+        width: 100%;
+        height: 505px;
+        position: relative;
+        .iframeWrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 */
+            height: 0;
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                filter: brightness(0.8);
+                pointer-events: none;
+            }
+        }
+        img {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            max-height: 528px;
+        }
+    }
+    .detailContentInfo {
+        width: 100%;
+        height: 100%;
+        .title {
+            font-size: 40px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            max-width: 75%;
+            padding: 0 30px;
+            margin-bottom: 20px;
+            color: orange;
+            span {
+                margin-top: 2px;
+                max-width: 75%;
+            }
+            button {
+                width: 106px;
+                height: 40px;
+                background: white;
+                border: none;
+                outline: none;
+                font-size: 18px;
+                border-radius: 5px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: space-around;
+                margin-top: 9px;
+                margin-left: 43px;
+                cursor: pointer;
+                &:hover {
+                    background: #e8e8e8;
+                }
+            }
+        }
+        .detailsWrapper {
+            font-size: 17px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 30px;
+            p {
+                margin: 0;
+            }
+            .description {
+                width: 55%;
+            }
+            .details {
+                width: 35%;
+                display: flex;
+                align-items: flex-start;
+                font-size: 15px;
+                flex-direction: column;
+                .detailGroup {
+                    display: flex;
+                    margin-bottom: 10px;
+                    .detailGroupTitle {
+                        margin-right: 10px;
+                        color: orange;
+                    }
+                    .detailGroupValue {
+                        cursor: pointer;
+                        span {
+                            &:hover {
+                                color: #c3c3c3;
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .similarSection {
+            width: 97%;
+            margin: 50px auto 0;
+            font-size: 23px;
+            font-weight: bold;
+            padding: 0 30px;
+            color: orange;
+            margin-bottom: 0;
+        }
+    }
+}

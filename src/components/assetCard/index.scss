@@ -2,9 +2,11 @@ $orangeColor: #ff9800;
 .assetCard {
     height: 100%;
     margin-left: 10px;
+    display: inline-block;
     background-repeat: no-repeat;
     background-size: contain;
-    width: 10em;
+    background-position: center;
+    width: inherit;
     cursor: pointer;
     max-width: 200px;
     border-radius: 4px;
@@ -14,7 +16,4 @@ $orangeColor: #ff9800;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    &:hover {
-        box-shadow: 0px 0px 4px 2px #ff9800;
-    }
 }
