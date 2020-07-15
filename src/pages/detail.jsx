@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import GlobalState from '../store/context';
 import Loader from '../components/loader';
-
 import './detail.scss';
 import DetailContent from '../components/detailContent';
 
@@ -13,11 +12,13 @@ export default function Detail() {
     const location = useLocation();
     const history = useHistory();
     const [assetData, setAssetData] = useState(null);
-    // const [error, setError] = useState(true);
-
+    const [error, setError] = useState(false);
     const { state: { config }, API } = useContext(GlobalState);
     const currentLocation = location.pathname;
     const isSeries = currentLocation.split('/')[2] === 'series';
+    const handleError = () => {
+        setError(true);
+    };
     const handleData = (data) => {
         setAssetData(data);
     };
@@ -33,8 +34,8 @@ export default function Detail() {
         const action = isSeries ? 'getSeries' : 'getMovies';
         const params = { append_to_response: 'videos,images,credits,similar' };
         API[action](params, [assetID])
-            .then((res) => handleData(res.data));
-        /* .catch(() => setError(true)) */
+            .then((res) => handleData(res.data))
+            .catch(handleError);
     }, [currentLocation]);
     return (
         <div className="detailWrapper">
@@ -42,7 +43,7 @@ export default function Detail() {
                 <p className="closeIcon" role="presentation" onClick={closeDialog}>
                     <FontAwesomeIcon icon={faTimesCircle} />
                 </p>
-                {(!assetData) ? <Loader />
+                {(!assetData || error) ? <Loader />
                     : (
                         <DetailContent
                             handlePlayAsset={handlePlayAsset}

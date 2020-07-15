@@ -83,7 +83,7 @@ export default function DetailContent({
                         </div>
                         {assetData.release_date && (
                             <div className="detailGroup">
-                                <p className="detailGroupTitle">Release data:</p>
+                                <p className="detailGroupTitle">Release date:</p>
                                 <p className="detailGroupValue">{assetData.release_date}</p>
                             </div>
                         )}

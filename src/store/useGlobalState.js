@@ -7,7 +7,8 @@ import ApiService from '../services/api';
 const initialState = {
     config: null,
     genres: null,
-    searchValue: ''
+    searchValue: '',
+    error: {}
 };
 
 const reducer = (state, action) => {
