@@ -1,4 +1,4 @@
-Using tmdb api to create a movie/series library.
+Using tmdb api to create a movie/series library application.
 
 ## Available Scripts
 
