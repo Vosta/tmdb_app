@@ -1,3 +1,5 @@
+Using tmdb api to create a movie/series library.
+
 ## Available Scripts
 
 In the project directory, you can run:
